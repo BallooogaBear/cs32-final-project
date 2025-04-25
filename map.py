@@ -5,7 +5,6 @@ api_key = "5b3ce3597851110001cf6248ad43bca6b7504220ad3d487037a6eb7a"
 
 client = openrouteservice.Client(key=api_key)
 
-# Setting the start and end points as coordinates
 start = [-71.1169, 42.3745]   # Sever Hall, Cambridge
 end = [-71.1151, 42.3683]     # Leverett House, Cambridge
 
