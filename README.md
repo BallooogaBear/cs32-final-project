@@ -1,2 +1,4 @@
 # cs32-final-project
 A Cambridge public art walking tour maker!
+
+Before running, make sure to pip install pandas, folium, and openrouteservice. You should also upload the public_art_cleaned.csv file which is all in this project folder. The program will ask you for inputs at different times. Instructions on how to answer these prompts will be printed! At the end, in order to see your final route, download 'map.html' and open it in your browser. Also, I wanted to credit SyntaxByte the Youtube channel for teaching how to get started on building routes with ORS (https://www.youtube.com/watch?v=xBxWuq8SR6k). Happy tour making!

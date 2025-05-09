@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_471e41416a7d78fc5a6682c1a93c1a4b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_471e41416a7d78fc5a6682c1a93c1a4b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_471e41416a7d78fc5a6682c1a93c1a4b = L.map(
+                "map_471e41416a7d78fc5a6682c1a93c1a4b",
+                {
+                    center: [42.361925, -71.091524],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 14,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8fa3011560f8a46725d528748e78bc14 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8fa3011560f8a46725d528748e78bc14.addTo(map_471e41416a7d78fc5a6682c1a93c1a4b);
+        
+    
+
+        function geo_json_95a14f45b05d1099c69fae2b297625a1_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_95a14f45b05d1099c69fae2b297625a1 = L.geoJson(null, {
+                onEachFeature: geo_json_95a14f45b05d1099c69fae2b297625a1_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_95a14f45b05d1099c69fae2b297625a1_add (data) {
+            geo_json_95a14f45b05d1099c69fae2b297625a1
+                .addData(data);
+        }
+            geo_json_95a14f45b05d1099c69fae2b297625a1_add({"bbox": [-71.115349, 42.361354, -71.091516, 42.374343], "features": [{"bbox": [-71.115349, 42.361354, -71.091516, 42.374343], "geometry": {"coordinates": [[-71.091516, 42.361917], [-71.092633, 42.361354], [-71.092911, 42.361677], [-71.092928, 42.361701], [-71.093077, 42.361626], [-71.093101, 42.361651], [-71.093385, 42.361965], [-71.093799, 42.361766], [-71.093775, 42.361882], [-71.093766, 42.361927], [-71.093759, 42.361961], [-71.093817, 42.361981], [-71.093889, 42.362006], [-71.094005, 42.362082], [-71.094765, 42.362138], [-71.094804, 42.362139], [-71.094705, 42.362984], [-71.094741, 42.362987], [-71.095233, 42.363029], [-71.095278, 42.363034], [-71.095345, 42.363038], [-71.095347, 42.363105], [-71.09534, 42.363191], [-71.095544, 42.363209], [-71.095544, 42.363256], [-71.095573, 42.363305], [-71.095661, 42.363354], [-71.095887, 42.363619], [-71.095995, 42.363746], [-71.09606, 42.363822], [-71.096081, 42.36388], [-71.096121, 42.363932], [-71.096108, 42.363979], [-71.096217, 42.363992], [-71.096345, 42.364009], [-71.096414, 42.363922], [-71.096536, 42.363892], [-71.096591, 42.363883], [-71.096723, 42.363892], [-71.096744, 42.36392], [-71.097407, 42.363958], [-71.097414, 42.363975], [-71.097408, 42.364061], [-71.097302, 42.364342], [-71.097297, 42.364361], [-71.097341, 42.364371], [-71.097314, 42.364457], [-71.097357, 42.364467], [-71.09734, 42.364519], [-71.097379, 42.364527], [-71.09734, 42.364519], [-71.097142, 42.365018], [-71.097104, 42.36501], [-71.09709, 42.36504], [-71.097043, 42.365031], [-71.097023, 42.365069], [-71.096338, 42.364924], [-71.096237, 42.364908], [-71.096174, 42.364904], [-71.09601, 42.36534], [-71.095718, 42.366113], [-71.095696, 42.366174], [-71.095686, 42.366224], [-71.09539, 42.366103], [-71.095315, 42.366181], [-71.095129, 42.366253], [-71.09514, 42.366477], [-71.09512, 42.366516], [-71.095101, 42.366544], [-71.095109, 42.366569], [-71.095149, 42.366589], [-71.095045, 42.366726], [-71.095036, 42.366738], [-71.094954, 42.366845], [-71.095089, 42.366897], [-71.09533, 42.366988], [-71.095377, 42.367005], [-71.095468, 42.367033], [-71.095536, 42.36706], [-71.096363, 42.367397], [-71.096427, 42.367415], [-71.096498, 42.367447], [-71.096867, 42.367597], [-71.097294, 42.36777], [-71.097338, 42.367783], [-71.09735, 42.367775], [-71.097412, 42.367805], [-71.097459, 42.367822], [-71.097528, 42.367859], [-71.098183, 42.368114], [-71.098227, 42.368131], [-71.09829, 42.368158], [-71.098375, 42.368199], [-71.09899, 42.368432], [-71.099059, 42.368457], [-71.099113, 42.368477], [-71.099106, 42.368487], [-71.099125, 42.368495], [-71.099158, 42.368508], [-71.099799, 42.368766], [-71.099831, 42.368703], [-71.099884, 42.368698], [-71.099958, 42.368671], [-71.100091, 42.368679], [-71.100241, 42.36859], [-71.100349, 42.368633], [-71.100523, 42.368372], [-71.100466, 42.368296], [-71.100255, 42.368217], [-71.100301, 42.368134], [-71.100434, 42.367908], [-71.100682, 42.367994], [-71.10082, 42.368043], [-71.101153, 42.368163], [-71.101185, 42.368175], [-71.101003, 42.368442], [-71.100581, 42.369063], [-71.100608, 42.369072], [-71.100992, 42.369226], [-71.100949, 42.369294], [-71.100906, 42.36936], [-71.100976, 42.36939], [-71.101048, 42.369422], [-71.10125, 42.369503], [-71.101388, 42.369557], [-71.101896, 42.369759], [-71.101954, 42.369783], [-71.102019, 42.369809], [-71.102825, 42.370129], [-71.102877, 42.370149], [-71.102944, 42.370174], [-71.103653, 42.370452], [-71.103666, 42.370457], [-71.103696, 42.370469], [-71.103752, 42.370491], [-71.103767, 42.370497], [-71.104608, 42.37083], [-71.104613, 42.370827], [-71.104608, 42.37083], [-71.104687, 42.370862], [-71.104795, 42.370815], [-71.104905, 42.370761], [-71.104972, 42.370785], [-71.105879, 42.36983], [-71.106765, 42.370078], [-71.106824, 42.370032], [-71.106876, 42.369991], [-71.106943, 42.370006], [-71.107198, 42.369783], [-71.107828, 42.369206], [-71.108702, 42.368447], [-71.108771, 42.36839], [-71.108837, 42.368329], [-71.109149, 42.368047], [-71.10936, 42.367852], [-71.109406, 42.367863], [-71.109411, 42.367864], [-71.109436, 42.367848], [-71.109462, 42.367855], [-71.109468, 42.367849], [-71.109498, 42.36782], [-71.109905, 42.368], [-71.110274, 42.368134], [-71.110301, 42.368098], [-71.110474, 42.367859], [-71.110548, 42.367757], [-71.110628, 42.367645], [-71.110441, 42.367557], [-71.110329, 42.367679], [-71.110441, 42.367557], [-71.110628, 42.367645], [-71.110558, 42.367743], [-71.110628, 42.367645], [-71.110498, 42.367584], [-71.110628, 42.367645], [-71.111018, 42.367788], [-71.111062, 42.367802], [-71.111139, 42.367826], [-71.113379, 42.368586], [-71.113458, 42.368619], [-71.113455, 42.368824], [-71.113404, 42.369218], [-71.113412, 42.369219], [-71.113455, 42.369224], [-71.113513, 42.369231], [-71.113528, 42.369233], [-71.113546, 42.369247], [-71.113545, 42.369256], [-71.113539, 42.369291], [-71.113534, 42.369318], [-71.113534, 42.369323], [-71.113504, 42.369327], [-71.113493, 42.369347], [-71.113475, 42.369479], [-71.113405, 42.370037], [-71.113404, 42.37005], [-71.113462, 42.370077], [-71.113441, 42.370168], [-71.113437, 42.37019], [-71.113399, 42.370187], [-71.113385, 42.370214], [-71.113371, 42.370305], [-71.113902, 42.370739], [-71.113843, 42.370782], [-71.113758, 42.370843], [-71.113764, 42.370848], [-71.113804, 42.370881], [-71.113851, 42.370918], [-71.11425, 42.37124], [-71.114603, 42.371535], [-71.115175, 42.371995], [-71.115137, 42.372131], [-71.115231, 42.372163], [-71.115269, 42.372193], [-71.115264, 42.372292], [-71.115257, 42.372334], [-71.115256, 42.372339], [-71.115248, 42.372394], [-71.115208, 42.372403], [-71.115179, 42.372438], [-71.115042, 42.372916], [-71.114918, 42.373366], [-71.114844, 42.373651], [-71.11477, 42.373948], [-71.1147, 42.374228], [-71.114714, 42.37423], [-71.114766, 42.37424], [-71.115226, 42.374325], [-71.115297, 42.374335], [-71.115327, 42.37434], [-71.115349, 42.374343]], "type": "LineString"}, "properties": {"segments": [{"distance": 839.4, "duration": 604.3, "steps": [{"distance": 111.1, "duration": 80.0, "instruction": "Head southwest", "name": "-", "type": 11, "way_points": [0, 1]}, {"distance": 105.8, "duration": 76.2, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [1, 6]}, {"distance": 40.6, "duration": 29.2, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [6, 7]}, {"distance": 21.9, "duration": 15.8, "instruction": "Turn sharp right", "name": "-", "type": 3, "way_points": [7, 10]}, {"distance": 90.5, "duration": 65.2, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [10, 15]}, {"distance": 94.4, "duration": 68.0, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [15, 16]}, {"distance": 52.9, "duration": 38.1, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [16, 20]}, {"distance": 17.0, "duration": 12.2, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [20, 22]}, {"distance": 16.8, "duration": 12.1, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [22, 23]}, {"distance": 20.2, "duration": 14.5, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [23, 26]}, {"distance": 68.2, "duration": 49.1, "instruction": "Keep right", "name": "-", "type": 13, "way_points": [26, 30]}, {"distance": 12.0, "duration": 8.7, "instruction": "Turn slight left onto Newtowne Court", "name": "Newtowne Court", "type": 4, "way_points": [30, 32]}, {"distance": 19.8, "duration": 14.2, "instruction": "Turn left onto Newtowne Court", "name": "Newtowne Court", "type": 0, "way_points": [32, 34]}, {"distance": 37.3, "duration": 26.8, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [34, 38]}, {"distance": 3.6, "duration": 2.6, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [38, 39]}, {"distance": 54.6, "duration": 39.3, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [39, 40]}, {"distance": 46.1, "duration": 33.2, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [40, 44]}, {"distance": 3.7, "duration": 2.7, "instruction": "Turn left onto Cherry Court", "name": "Cherry Court", "type": 0, "way_points": [44, 45]}, {"distance": 9.8, "duration": 7.1, "instruction": "Turn right onto Cherry Street", "name": "Cherry Street", "type": 1, "way_points": [45, 46]}, {"distance": 3.7, "duration": 2.7, "instruction": "Turn left onto Eaton Street", "name": "Eaton Street", "type": 0, "way_points": [46, 47]}, {"distance": 5.9, "duration": 4.3, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [47, 48]}, {"distance": 3.4, "duration": 2.4, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [48, 49]}, {"distance": 0.0, "duration": 0.0, "instruction": "Arrive at your destination, on the right", "name": "-", "type": 10, "way_points": [49, 49]}]}, {"distance": 414.1, "duration": 298.1, "steps": [{"distance": 3.4, "duration": 2.4, "instruction": "Head east", "name": "-", "type": 11, "way_points": [49, 50]}, {"distance": 57.9, "duration": 41.7, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [50, 51]}, {"distance": 3.3, "duration": 2.3, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [51, 52]}, {"distance": 3.6, "duration": 2.6, "instruction": "Turn left onto Cherry Street", "name": "Cherry Street", "type": 0, "way_points": [52, 53]}, {"distance": 4.0, "duration": 2.9, "instruction": "Turn right onto Washington Street", "name": "Washington Street", "type": 1, "way_points": [53, 54]}, {"distance": 4.5, "duration": 3.3, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [54, 55]}, {"distance": 72.2, "duration": 52.0, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [55, 58]}, {"distance": 152.2, "duration": 109.6, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [58, 62]}, {"distance": 27.8, "duration": 20.0, "instruction": "Turn sharp right", "name": "-", "type": 3, "way_points": [62, 63]}, {"distance": 27.9, "duration": 20.1, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [63, 65]}, {"distance": 33.0, "duration": 23.8, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [65, 68]}, {"distance": 2.9, "duration": 2.1, "instruction": "Turn slight left onto Dickinson Street", "name": "Dickinson Street", "type": 4, "way_points": [68, 69]}, {"distance": 3.9, "duration": 2.8, "instruction": "Keep left", "name": "-", "type": 12, "way_points": [69, 70]}, {"distance": 17.5, "duration": 12.6, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [70, 71]}, {"distance": 0.0, "duration": 0.0, "instruction": "Arrive at your destination, on the left", "name": "-", "type": 10, "way_points": [71, 71]}]}, {"distance": 0.0, "duration": 0.0, "steps": [{"distance": 0.0, "duration": 0.0, "instruction": "Head east", "name": "-", "type": 11, "way_points": [71, 71]}]}, {"distance": 1.5, "duration": 1.1, "steps": [{"distance": 1.5, "duration": 1.1, "instruction": "Head northeast", "name": "-", "type": 11, "way_points": [71, 72]}, {"distance": 0.0, "duration": 0.0, "instruction": "Arrive at your destination, on the left", "name": "-", "type": 10, "way_points": [72, 72]}]}, {"distance": 555.8, "duration": 400.2, "steps": [{"distance": 13.7, "duration": 9.9, "instruction": "Head northeast", "name": "-", "type": 11, "way_points": [72, 73]}, {"distance": 223.4, "duration": 160.8, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [73, 85]}, {"distance": 164.6, "duration": 118.5, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [85, 95]}, {"distance": 66.1, "duration": 47.6, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [95, 99]}, {"distance": 7.5, "duration": 5.4, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [99, 100]}, {"distance": 4.4, "duration": 3.2, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [100, 101]}, {"distance": 43.7, "duration": 31.5, "instruction": "Keep left", "name": "-", "type": 12, "way_points": [101, 105]}, {"distance": 32.4, "duration": 23.4, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [105, 106]}, {"distance": 0.0, "duration": 0.0, "instruction": "Arrive at your destination, on the right", "name": "-", "type": 10, "way_points": [106, 106]}]}, {"distance": 0.0, "duration": 0.0, "steps": [{"distance": 0.0, "duration": 0.0, "instruction": "Head east", "name": "-", "type": 11, "way_points": [106, 106]}]}, {"distance": 0.0, "duration": 0.0, "steps": [{"distance": 0.0, "duration": 0.0, "instruction": "Head east", "name": "-", "type": 11, "way_points": [106, 106]}]}, {"distance": 0.0, "duration": 0.0, "steps": [{"distance": 0.0, "duration": 0.0, "instruction": "Head east", "name": "-", "type": 11, "way_points": [106, 106]}]}, {"distance": 0.0, "duration": 0.0, "steps": [{"distance": 0.0, "duration": 0.0, "instruction": "Head east", "name": "-", "type": 11, "way_points": [106, 106]}]}, {"distance": 168.2, "duration": 121.1, "steps": [{"distance": 29.0, "duration": 20.9, "instruction": "Head southeast", "name": "-", "type": 11, "way_points": [106, 108]}, {"distance": 37.4, "duration": 27.0, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [108, 110]}, {"distance": 68.5, "duration": 49.3, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [110, 114]}, {"distance": 33.3, "duration": 24.0, "instruction": "Turn right onto Scouting Way", "name": "Scouting Way", "type": 1, "way_points": [114, 115]}, {"distance": 0.0, "duration": 0.0, "instruction": "Arrive at Scouting Way, on the left", "name": "-", "type": 10, "way_points": [115, 115]}]}, {"distance": 477.8, "duration": 344.0, "steps": [{"distance": 77.2, "duration": 55.6, "instruction": "Head northeast on Scouting Way", "name": "Scouting Way", "type": 11, "way_points": [115, 116]}, {"distance": 38.3, "duration": 27.6, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [116, 118]}, {"distance": 16.5, "duration": 11.9, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [118, 120]}, {"distance": 345.3, "duration": 248.6, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [120, 136]}, {"distance": 0.5, "duration": 0.4, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [136, 137]}, {"distance": 0.0, "duration": 0.0, "instruction": "Arrive at your destination, on the right", "name": "-", "type": 10, "way_points": [137, 137]}]}, {"distance": 694.8, "duration": 500.2, "steps": [{"distance": 0.5, "duration": 0.4, "instruction": "Head northeast", "name": "-", "type": 11, "way_points": [137, 138]}, {"distance": 7.4, "duration": 5.3, "instruction": "Turn sharp left", "name": "-", "type": 2, "way_points": [138, 139]}, {"distance": 21.2, "duration": 15.3, "instruction": "Turn left onto Fayette Street", "name": "Fayette Street", "type": 0, "way_points": [139, 141]}, {"distance": 6.1, "duration": 4.4, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [141, 142]}, {"distance": 129.7, "duration": 93.4, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [142, 143]}, {"distance": 77.9, "duration": 56.1, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [143, 144]}, {"distance": 13.3, "duration": 9.6, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [144, 146]}, {"distance": 5.7, "duration": 4.1, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [146, 147]}, {"distance": 311.2, "duration": 224.0, "instruction": "Turn left onto Hancock Street", "name": "Hancock Street", "type": 0, "way_points": [147, 154]}, {"distance": 4.4, "duration": 3.2, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [154, 156]}, {"distance": 5.0, "duration": 3.6, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [156, 158]}, {"distance": 4.9, "duration": 3.5, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [158, 160]}, {"distance": 72.8, "duration": 52.4, "instruction": "Turn right onto Green Street", "name": "Green Street", "type": 1, "way_points": [160, 162]}, {"distance": 34.7, "duration": 25.0, "instruction": "Turn left onto Belvidere Place", "name": "Belvidere Place", "type": 0, "way_points": [162, 164]}, {"distance": 0.0, "duration": 0.0, "instruction": "Arrive at Belvidere Place, on the right", "name": "-", "type": 10, "way_points": [164, 164]}]}, {"distance": 12.9, "duration": 9.3, "steps": [{"distance": 12.9, "duration": 9.3, "instruction": "Head southwest on Belvidere Place", "name": "Belvidere Place", "type": 11, "way_points": [164, 165]}, {"distance": 0.0, "duration": 0.0, "instruction": "Arrive at Belvidere Place, on the right", "name": "-", "type": 10, "way_points": [165, 165]}]}, {"distance": 48.7, "duration": 35.1, "steps": [{"distance": 14.1, "duration": 10.1, "instruction": "Head southwest on Belvidere Place", "name": "Belvidere Place", "type": 11, "way_points": [165, 166]}, {"distance": 18.2, "duration": 13.1, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [166, 167]}, {"distance": 16.4, "duration": 11.8, "instruction": "Turn left onto Franklin Place", "name": "Franklin Place", "type": 0, "way_points": [167, 168]}, {"distance": 0.0, "duration": 0.0, "instruction": "Arrive at Franklin Place, on the left", "name": "-", "type": 10, "way_points": [168, 168]}]}, {"distance": 46.9, "duration": 33.8, "steps": [{"distance": 16.4, "duration": 11.8, "instruction": "Head southwest on Franklin Place", "name": "Franklin Place", "type": 11, "way_points": [168, 169]}, {"distance": 18.2, "duration": 13.1, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [169, 170]}, {"distance": 12.3, "duration": 8.9, "instruction": "Turn right onto Belvidere Place", "name": "Belvidere Place", "type": 1, "way_points": [170, 171]}, {"distance": 0.0, "duration": 0.0, "instruction": "Arrive at Belvidere Place, on the left", "name": "-", "type": 10, "way_points": [171, 171]}]}, {"distance": 25.0, "duration": 18.0, "steps": [{"distance": 12.3, "duration": 8.9, "instruction": "Head southwest on Belvidere Place", "name": "Belvidere Place", "type": 11, "way_points": [171, 172]}, {"distance": 12.7, "duration": 9.2, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [172, 173]}, {"distance": 0.0, "duration": 0.0, "instruction": "Arrive at your destination, on the left", "name": "-", "type": 10, "way_points": [173, 173]}]}, {"distance": 1046.7, "duration": 753.6, "steps": [{"distance": 336.0, "duration": 241.9, "instruction": "Head northwest", "name": "-", "type": 11, "way_points": [173, 181]}, {"distance": 10.3, "duration": 7.4, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [181, 185]}, {"distance": 2.2, "duration": 1.6, "instruction": "Turn slight right", "name": "-", "type": 5, "way_points": [185, 186]}, {"distance": 8.5, "duration": 6.1, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [186, 190]}, {"distance": 89.1, "duration": 64.1, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [190, 196]}, {"distance": 12.7, "duration": 9.1, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [196, 198]}, {"distance": 81.6, "duration": 58.8, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [198, 202]}, {"distance": 16.6, "duration": 11.9, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [202, 204]}, {"distance": 173.1, "duration": 124.6, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [204, 210]}, {"distance": 15.5, "duration": 11.1, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [210, 211]}, {"distance": 13.2, "duration": 9.5, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [211, 213]}, {"distance": 22.4, "duration": 16.1, "instruction": "Turn slight right", "name": "-", "type": 5, "way_points": [213, 217]}, {"distance": 3.5, "duration": 2.5, "instruction": "Turn right", "name": "-", "type": 1, "way_points": [217, 218]}, {"distance": 207.4, "duration": 149.4, "instruction": "Keep left", "name": "-", "type": 12, "way_points": [218, 224]}, {"distance": 5.6, "duration": 4.0, "instruction": "Turn left", "name": "-", "type": 0, "way_points": [224, 226]}, {"distance": 49.2, "duration": 35.4, "instruction": "Keep left", "name": "-", "type": 12, "way_points": [226, 230]}, {"distance": 0.0, "duration": 0.0, "instruction": "Arrive at your destination, straight ahead", "name": "-", "type": 10, "way_points": [230, 230]}]}], "summary": {"distance": 4331.8, "duration": 3118.8}, "way_points": [0, 49, 71, 71, 72, 106, 106, 106, 106, 106, 115, 137, 164, 165, 168, 171, 173, 230]}, "type": "Feature"}], "metadata": {"attribution": "openrouteservice.org | OpenStreetMap contributors", "engine": {"build_date": "2025-04-10T21:25:30Z", "graph_date": "2025-04-29T17:55:38Z", "version": "9.1.2"}, "query": {"coordinates": [[-71.091524, 42.361925], [-71.09737266, 42.36454464], [-71.09509001, 42.36674522], [-71.09509001, 42.36674522], [-71.09508271, 42.36675758], [-71.10067237, 42.36832183], [-71.10068712, 42.36837732], [-71.10072199, 42.36838327], [-71.10073318, 42.36836603], [-71.10075015, 42.3684011], [-71.10080916, 42.36837039], [-71.10461585, 42.37082878], [-71.11037121, 42.36781854], [-71.11045386, 42.36771962], [-71.11037392, 42.36770142], [-71.11054544, 42.3677378], [-71.11049955, 42.36758135], [-71.115348, 42.374348]], "format": "geojson", "profile": "foot-walking", "profileName": "foot-walking"}, "service": "routing", "timestamp": 1746764542193}, "type": "FeatureCollection"});
+        geo_json_95a14f45b05d1099c69fae2b297625a1.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_95a14f45b05d1099c69fae2b297625a1.addTo(map_471e41416a7d78fc5a6682c1a93c1a4b);
+        
+    
+            var marker_2c081c9e1de11508d851e622a2753739 = L.marker(
+                [42.361925, -71.091524],
+                {
+}
+            ).addTo(map_471e41416a7d78fc5a6682c1a93c1a4b);
+        
+    
+            var icon_c6179f9ecbaff796cd02acd97fd92e2c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d64baa70683e6c365bac61c0ed1e1737 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b3a47b36e457c5844ff99a123afacb03 = $(`<div id="html_b3a47b36e457c5844ff99a123afacb03" style="width: 100.0%; height: 100.0%;">Start</div>`)[0];
+                popup_d64baa70683e6c365bac61c0ed1e1737.setContent(html_b3a47b36e457c5844ff99a123afacb03);
+            
+        
+
+        marker_2c081c9e1de11508d851e622a2753739.bindPopup(popup_d64baa70683e6c365bac61c0ed1e1737)
+        ;
+
+        
+    
+    
+                marker_2c081c9e1de11508d851e622a2753739.setIcon(icon_c6179f9ecbaff796cd02acd97fd92e2c);
+            
+    
+            var marker_83c46f9d2b49b9ce81a803c50b5be423 = L.marker(
+                [42.374348, -71.115348],
+                {
+}
+            ).addTo(map_471e41416a7d78fc5a6682c1a93c1a4b);
+        
+    
+            var icon_aa9a956a99d1b86d3908c0285040aa57 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d3897e253fc92a57c8aa74ea1d402551 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b115dee43024654f832a9d939f6ef49c = $(`<div id="html_b115dee43024654f832a9d939f6ef49c" style="width: 100.0%; height: 100.0%;">End<br>Total Time: 52.0 min</div>`)[0];
+                popup_d3897e253fc92a57c8aa74ea1d402551.setContent(html_b115dee43024654f832a9d939f6ef49c);
+            
+        
+
+        marker_83c46f9d2b49b9ce81a803c50b5be423.bindPopup(popup_d3897e253fc92a57c8aa74ea1d402551)
+        ;
+
+        
+    
+    
+                marker_83c46f9d2b49b9ce81a803c50b5be423.setIcon(icon_aa9a956a99d1b86d3908c0285040aa57);
+            
+    
+            var marker_24af995540ff84f27ca0114d1aad0f21 = L.marker(
+                [42.36454464, -71.09737266],
+                {
+}
+            ).addTo(map_471e41416a7d78fc5a6682c1a93c1a4b);
+        
+    
+            var icon_c60ad8fbe632a09c3b070cf76e917485 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "paint-brush",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_75d623c512d98b087e9ac9747a24614f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_98bd5383ab7621536d823ae504e7e0b9 = $(`<div id="html_98bd5383ab7621536d823ae504e7e0b9" style="width: 100.0%; height: 100.0%;">Art Stop #1</div>`)[0];
+                popup_75d623c512d98b087e9ac9747a24614f.setContent(html_98bd5383ab7621536d823ae504e7e0b9);
+            
+        
+
+        marker_24af995540ff84f27ca0114d1aad0f21.bindPopup(popup_75d623c512d98b087e9ac9747a24614f)
+        ;
+
+        
+    
+    
+                marker_24af995540ff84f27ca0114d1aad0f21.setIcon(icon_c60ad8fbe632a09c3b070cf76e917485);
+            
+    
+            var marker_f208e84e65c34824db57c3d6f5942a7a = L.marker(
+                [42.36674522, -71.09509001],
+                {
+}
+            ).addTo(map_471e41416a7d78fc5a6682c1a93c1a4b);
+        
+    
+            var icon_1dacef5421ff6fe8f3c043c600fac98a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "paint-brush",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_89ab5931d6a2c1d9732d3409b894cc89 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fa33599b5573daeb5fa54f042231f088 = $(`<div id="html_fa33599b5573daeb5fa54f042231f088" style="width: 100.0%; height: 100.0%;">Art Stop #2</div>`)[0];
+                popup_89ab5931d6a2c1d9732d3409b894cc89.setContent(html_fa33599b5573daeb5fa54f042231f088);
+            
+        
+
+        marker_f208e84e65c34824db57c3d6f5942a7a.bindPopup(popup_89ab5931d6a2c1d9732d3409b894cc89)
+        ;
+
+        
+    
+    
+                marker_f208e84e65c34824db57c3d6f5942a7a.setIcon(icon_1dacef5421ff6fe8f3c043c600fac98a);
+            
+    
+            var marker_41db07e9efdd1854793ae811f45283dc = L.marker(
+                [42.36674522, -71.09509001],
+                {
+}
+            ).addTo(map_471e41416a7d78fc5a6682c1a93c1a4b);
+        
+    
+            var icon_cab6609c0a048f78e195e8a668b427c0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "paint-brush",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5320b5adff186dca2f24798dfbf0becc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_841a1316223f032dcfa7a4539dac754c = $(`<div id="html_841a1316223f032dcfa7a4539dac754c" style="width: 100.0%; height: 100.0%;">Art Stop #3</div>`)[0];
+                popup_5320b5adff186dca2f24798dfbf0becc.setContent(html_841a1316223f032dcfa7a4539dac754c);
+            
+        
+
+        marker_41db07e9efdd1854793ae811f45283dc.bindPopup(popup_5320b5adff186dca2f24798dfbf0becc)
+        ;
+
+        
+    
+    
+                marker_41db07e9efdd1854793ae811f45283dc.setIcon(icon_cab6609c0a048f78e195e8a668b427c0);
+            
+    
+            var marker_f61ce459f81461c5d785e05c326030c2 = L.marker(
+                [42.36675758, -71.09508271],
+                {
+}
+            ).addTo(map_471e41416a7d78fc5a6682c1a93c1a4b);
+        
+    
+            var icon_714b57b02f5f2a6336cdbf9339705772 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "paint-brush",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_accc102bbd816faafd0a41b27c0c9e10 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_87a5bfb98b4651990e5ae2f759c67b54 = $(`<div id="html_87a5bfb98b4651990e5ae2f759c67b54" style="width: 100.0%; height: 100.0%;">Art Stop #4</div>`)[0];
+                popup_accc102bbd816faafd0a41b27c0c9e10.setContent(html_87a5bfb98b4651990e5ae2f759c67b54);
+            
+        
+
+        marker_f61ce459f81461c5d785e05c326030c2.bindPopup(popup_accc102bbd816faafd0a41b27c0c9e10)
+        ;
+
+        
+    
+    
+                marker_f61ce459f81461c5d785e05c326030c2.setIcon(icon_714b57b02f5f2a6336cdbf9339705772);
+            
+    
+            var marker_8c665b42ed24eccf5513c5d6122cdec5 = L.marker(
+                [42.36832183, -71.10067237],
+                {
+}
+            ).addTo(map_471e41416a7d78fc5a6682c1a93c1a4b);
+        
+    
+            var icon_dd574522edd5e2976f4aede717d8fb23 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "paint-brush",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7d645ac7a4fc20abb78e6f32f4d2aa5e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c02cda710135ae41cf0b2b1128543edc = $(`<div id="html_c02cda710135ae41cf0b2b1128543edc" style="width: 100.0%; height: 100.0%;">Art Stop #5</div>`)[0];
+                popup_7d645ac7a4fc20abb78e6f32f4d2aa5e.setContent(html_c02cda710135ae41cf0b2b1128543edc);
+            
+        
+
+        marker_8c665b42ed24eccf5513c5d6122cdec5.bindPopup(popup_7d645ac7a4fc20abb78e6f32f4d2aa5e)
+        ;
+
+        
+    
+    
+                marker_8c665b42ed24eccf5513c5d6122cdec5.setIcon(icon_dd574522edd5e2976f4aede717d8fb23);
+            
+    
+            var marker_ba37bc64bfd30f4dc988c22d83ef12a3 = L.marker(
+                [42.36837732, -71.10068712],
+                {
+}
+            ).addTo(map_471e41416a7d78fc5a6682c1a93c1a4b);
+        
+    
+            var icon_2e6f8571f842e8ed9d2492cd1e1eaad5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "paint-brush",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d77a3342fbdda25b978e9cef82d76478 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b9ed7bf49cf9c0665ac3409251767538 = $(`<div id="html_b9ed7bf49cf9c0665ac3409251767538" style="width: 100.0%; height: 100.0%;">Art Stop #6</div>`)[0];
+                popup_d77a3342fbdda25b978e9cef82d76478.setContent(html_b9ed7bf49cf9c0665ac3409251767538);
+            
+        
+
+        marker_ba37bc64bfd30f4dc988c22d83ef12a3.bindPopup(popup_d77a3342fbdda25b978e9cef82d76478)
+        ;
+
+        
+    
+    
+                marker_ba37bc64bfd30f4dc988c22d83ef12a3.setIcon(icon_2e6f8571f842e8ed9d2492cd1e1eaad5);
+            
+    
+            var marker_f038572e9e3c2b35d7f4806050f7cdcf = L.marker(
+                [42.36838327, -71.10072199],
+                {
+}
+            ).addTo(map_471e41416a7d78fc5a6682c1a93c1a4b);
+        
+    
+            var icon_dd6b4a999cb09d6eb8e91776267c4a7f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "paint-brush",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6b0b3f2d12449842d6ba0b329c8d4cce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ae5758d71ead2ab47c6eb8c95c30f7d4 = $(`<div id="html_ae5758d71ead2ab47c6eb8c95c30f7d4" style="width: 100.0%; height: 100.0%;">Art Stop #7</div>`)[0];
+                popup_6b0b3f2d12449842d6ba0b329c8d4cce.setContent(html_ae5758d71ead2ab47c6eb8c95c30f7d4);
+            
+        
+
+        marker_f038572e9e3c2b35d7f4806050f7cdcf.bindPopup(popup_6b0b3f2d12449842d6ba0b329c8d4cce)
+        ;
+
+        
+    
+    
+                marker_f038572e9e3c2b35d7f4806050f7cdcf.setIcon(icon_dd6b4a999cb09d6eb8e91776267c4a7f);
+            
+    
+            var marker_cf012080ff4afea6f73f59511f62c04a = L.marker(
+                [42.36836603, -71.10073318],
+                {
+}
+            ).addTo(map_471e41416a7d78fc5a6682c1a93c1a4b);
+        
+    
+            var icon_fa0de19ad277fefc1c43d5a2e4be0ac2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "paint-brush",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1d943583e613e0cb042b4126daecd540 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e3d13e2ae231f9a287934abe0f84ce4e = $(`<div id="html_e3d13e2ae231f9a287934abe0f84ce4e" style="width: 100.0%; height: 100.0%;">Art Stop #8</div>`)[0];
+                popup_1d943583e613e0cb042b4126daecd540.setContent(html_e3d13e2ae231f9a287934abe0f84ce4e);
+            
+        
+
+        marker_cf012080ff4afea6f73f59511f62c04a.bindPopup(popup_1d943583e613e0cb042b4126daecd540)
+        ;
+
+        
+    
+    
+                marker_cf012080ff4afea6f73f59511f62c04a.setIcon(icon_fa0de19ad277fefc1c43d5a2e4be0ac2);
+            
+    
+            var marker_d798275cb54cf6c5bf879ddd35103620 = L.marker(
+                [42.3684011, -71.10075015],
+                {
+}
+            ).addTo(map_471e41416a7d78fc5a6682c1a93c1a4b);
+        
+    
+            var icon_6b584cd147bf9b15b153cb7f53322aab = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "paint-brush",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1781508038b26f58085de9450c0f3c4c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_39c0495dc3f2cd2b6ce828c08ab1d0ec = $(`<div id="html_39c0495dc3f2cd2b6ce828c08ab1d0ec" style="width: 100.0%; height: 100.0%;">Art Stop #9</div>`)[0];
+                popup_1781508038b26f58085de9450c0f3c4c.setContent(html_39c0495dc3f2cd2b6ce828c08ab1d0ec);
+            
+        
+
+        marker_d798275cb54cf6c5bf879ddd35103620.bindPopup(popup_1781508038b26f58085de9450c0f3c4c)
+        ;
+
+        
+    
+    
+                marker_d798275cb54cf6c5bf879ddd35103620.setIcon(icon_6b584cd147bf9b15b153cb7f53322aab);
+            
+    
+            var marker_2d26aa6508326f28b84114a070d81b86 = L.marker(
+                [42.36837039, -71.10080916],
+                {
+}
+            ).addTo(map_471e41416a7d78fc5a6682c1a93c1a4b);
+        
+    
+            var icon_210bfeaf44469d0f442e37c4bfcf5261 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "paint-brush",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_66b99b635a56077754c3718d62d8582a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_be07ea56e7b53ddcecfbfb63c161c441 = $(`<div id="html_be07ea56e7b53ddcecfbfb63c161c441" style="width: 100.0%; height: 100.0%;">Art Stop #10</div>`)[0];
+                popup_66b99b635a56077754c3718d62d8582a.setContent(html_be07ea56e7b53ddcecfbfb63c161c441);
+            
+        
+
+        marker_2d26aa6508326f28b84114a070d81b86.bindPopup(popup_66b99b635a56077754c3718d62d8582a)
+        ;
+
+        
+    
+    
+                marker_2d26aa6508326f28b84114a070d81b86.setIcon(icon_210bfeaf44469d0f442e37c4bfcf5261);
+            
+    
+            var marker_f3ae553c690f9c7dbb0ac2e826612600 = L.marker(
+                [42.37082878, -71.10461585],
+                {
+}
+            ).addTo(map_471e41416a7d78fc5a6682c1a93c1a4b);
+        
+    
+            var icon_b5d6bdce7c62f3d88e7c2af14c87fabe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "paint-brush",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_189a64118bb8d1e687ef224a664f12aa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7f454425d3bf3d4d44025e7a84481ba0 = $(`<div id="html_7f454425d3bf3d4d44025e7a84481ba0" style="width: 100.0%; height: 100.0%;">Art Stop #11</div>`)[0];
+                popup_189a64118bb8d1e687ef224a664f12aa.setContent(html_7f454425d3bf3d4d44025e7a84481ba0);
+            
+        
+
+        marker_f3ae553c690f9c7dbb0ac2e826612600.bindPopup(popup_189a64118bb8d1e687ef224a664f12aa)
+        ;
+
+        
+    
+    
+                marker_f3ae553c690f9c7dbb0ac2e826612600.setIcon(icon_b5d6bdce7c62f3d88e7c2af14c87fabe);
+            
+    
+            var marker_1b5acbcac44a835694053701b36ec6d5 = L.marker(
+                [42.36781854, -71.11037121],
+                {
+}
+            ).addTo(map_471e41416a7d78fc5a6682c1a93c1a4b);
+        
+    
+            var icon_b569bf49524a4cb85400d77f1c31e4c2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "paint-brush",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_087492a915fdf5cdc1b32c1a7809f353 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_84f2d9fcb9e77ab38dddeb8b2073b777 = $(`<div id="html_84f2d9fcb9e77ab38dddeb8b2073b777" style="width: 100.0%; height: 100.0%;">Art Stop #12</div>`)[0];
+                popup_087492a915fdf5cdc1b32c1a7809f353.setContent(html_84f2d9fcb9e77ab38dddeb8b2073b777);
+            
+        
+
+        marker_1b5acbcac44a835694053701b36ec6d5.bindPopup(popup_087492a915fdf5cdc1b32c1a7809f353)
+        ;
+
+        
+    
+    
+                marker_1b5acbcac44a835694053701b36ec6d5.setIcon(icon_b569bf49524a4cb85400d77f1c31e4c2);
+            
+    
+            var marker_048c41c6ff11ccb33c218fc067129889 = L.marker(
+                [42.36771962, -71.11045386],
+                {
+}
+            ).addTo(map_471e41416a7d78fc5a6682c1a93c1a4b);
+        
+    
+            var icon_46894a22905cf40b0ef0186bde2110d2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "paint-brush",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4001919e72fc7f16dcd84794e2333095 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ec90ef7df0e1f955f0ec8caf7c3b259e = $(`<div id="html_ec90ef7df0e1f955f0ec8caf7c3b259e" style="width: 100.0%; height: 100.0%;">Art Stop #13</div>`)[0];
+                popup_4001919e72fc7f16dcd84794e2333095.setContent(html_ec90ef7df0e1f955f0ec8caf7c3b259e);
+            
+        
+
+        marker_048c41c6ff11ccb33c218fc067129889.bindPopup(popup_4001919e72fc7f16dcd84794e2333095)
+        ;
+
+        
+    
+    
+                marker_048c41c6ff11ccb33c218fc067129889.setIcon(icon_46894a22905cf40b0ef0186bde2110d2);
+            
+    
+            var marker_4d86ac2ef30993b54f59de015b030ee0 = L.marker(
+                [42.36770142, -71.11037392],
+                {
+}
+            ).addTo(map_471e41416a7d78fc5a6682c1a93c1a4b);
+        
+    
+            var icon_e107a24b93cb4f735bdbd2da722b93a5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "paint-brush",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6e8343928c897de2f26ccdc915da9563 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8c1fb8d3ad6a0987743cc0498df1abef = $(`<div id="html_8c1fb8d3ad6a0987743cc0498df1abef" style="width: 100.0%; height: 100.0%;">Art Stop #14</div>`)[0];
+                popup_6e8343928c897de2f26ccdc915da9563.setContent(html_8c1fb8d3ad6a0987743cc0498df1abef);
+            
+        
+
+        marker_4d86ac2ef30993b54f59de015b030ee0.bindPopup(popup_6e8343928c897de2f26ccdc915da9563)
+        ;
+
+        
+    
+    
+                marker_4d86ac2ef30993b54f59de015b030ee0.setIcon(icon_e107a24b93cb4f735bdbd2da722b93a5);
+            
+    
+            var marker_4c8e64bd65f8debf6a3ae44f462bc458 = L.marker(
+                [42.3677378, -71.11054544],
+                {
+}
+            ).addTo(map_471e41416a7d78fc5a6682c1a93c1a4b);
+        
+    
+            var icon_3c798e292ddc03ea5ef68dc8815999de = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "paint-brush",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_645070280d6629a17373c8b5766c33d2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_250a5db46f895727f95aaf7a17c92ac3 = $(`<div id="html_250a5db46f895727f95aaf7a17c92ac3" style="width: 100.0%; height: 100.0%;">Art Stop #15</div>`)[0];
+                popup_645070280d6629a17373c8b5766c33d2.setContent(html_250a5db46f895727f95aaf7a17c92ac3);
+            
+        
+
+        marker_4c8e64bd65f8debf6a3ae44f462bc458.bindPopup(popup_645070280d6629a17373c8b5766c33d2)
+        ;
+
+        
+    
+    
+                marker_4c8e64bd65f8debf6a3ae44f462bc458.setIcon(icon_3c798e292ddc03ea5ef68dc8815999de);
+            
+    
+            var marker_4c1938d75f19eade6ee4f0da5a733d2b = L.marker(
+                [42.36758135, -71.11049955],
+                {
+}
+            ).addTo(map_471e41416a7d78fc5a6682c1a93c1a4b);
+        
+    
+            var icon_9fffa0d63ebd2c4b3dbf2147c607281c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "paint-brush",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1d35fa3da254cc3ae2ba15033d51201a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3a85ed7cfacc66f8a2d53a01a068a6e3 = $(`<div id="html_3a85ed7cfacc66f8a2d53a01a068a6e3" style="width: 100.0%; height: 100.0%;">Art Stop #16</div>`)[0];
+                popup_1d35fa3da254cc3ae2ba15033d51201a.setContent(html_3a85ed7cfacc66f8a2d53a01a068a6e3);
+            
+        
+
+        marker_4c1938d75f19eade6ee4f0da5a733d2b.bindPopup(popup_1d35fa3da254cc3ae2ba15033d51201a)
+        ;
+
+        
+    
+    
+                marker_4c1938d75f19eade6ee4f0da5a733d2b.setIcon(icon_9fffa0d63ebd2c4b3dbf2147c607281c);
+            
+</script>
+</html>
